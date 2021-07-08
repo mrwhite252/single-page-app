@@ -1,0 +1,345 @@
+.select-car-view {
+  padding: 0 1em;
+}
+
+.thumbnail-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid $BackgroundColor;
+  h5 {
+    font-size: 1.5em;
+    margin: 0;
+    color: $BackgroundColor;
+  }
+}
+
+.edit-btn {
+  color: $BoxColor2;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+
+  h5 {
+    color: $BoxColor2;
+    margin-left: 0.5em;
+  }
+}
+
+.edit-btn:hover {
+  color: white;
+  h5 {
+    color: white;
+  }
+}
+
+.itinerary-thumbnail-container {
+  background-color: $BoxColor;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: 3px;
+  box-shadow: $BoxShadow1;
+}
+
+.itinerary-thumbnail {
+  display: flex;
+  flex-wrap: wrap;
+  h6 {
+    font-weight: 300;
+    margin: 0.5em 0;
+  }
+
+  p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+  }
+  .content-wrapper {
+    margin: 0.5em 0;
+  }
+  .pick-up,
+  .return {
+    flex: 1 0 100%;
+  }
+
+  .age,
+  .licdnse,
+  .number,
+  .milsage {
+    flex: 0 0 45%;
+  }
+}
+
+.vehicle-thumbnail-container {
+  background-color: $BoxColor;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: 3px;
+  box-shadow: $BoxShadow1;
+
+  h5 {
+    font-size: 1.5em;
+    margin: 0;
+    color: $BackgroundColor;
+  }
+}
+
+.vehicle-thumbnail {
+  display: flex;
+  flex-direction: column;
+
+  .main-img {
+    width: 20em;
+    align-self: center;
+  }
+
+  .car-detail {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .car-name {
+    h2,
+    h3 {
+      margin: 0.5em 0;
+    }
+    .car-type {
+      font-size: 2em;
+    }
+    .car-discription {
+      color: $BoxColor2;
+      font-weight: 400;
+    }
+  }
+
+  .car-basic-info-content {
+    display: flex;
+    margin: 0.5em 0;
+    img {
+      width: 1.2em;
+      margin-right: 2em;
+    }
+    p {
+      margin: 0.5em 0;
+    }
+  }
+
+  .price-container {
+    p {
+      font-size: 2em;
+      font-weight: 600;
+      color: $BackgroundColor;
+      margin: 0.5em 0;
+    }
+    span {
+      color: white;
+    }
+  }
+
+  .more-info-btn {
+    cursor: pointer;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .more-info-btn:hover {
+    text-decoration-line: underline;
+  }
+
+  .car-additional-info {
+    border-top: 1px solid $BackgroundColor;
+    border-bottom: 1px solid $BackgroundColor;
+    padding: 1em 0;
+    h5 {
+      font-size: 1.2em;
+      font-weight: 800;
+      color: white;
+    }
+
+    p {
+      line-height: 100%;
+    }
+  }
+
+  .car-price-info {
+    .price-holder {
+      font-size: 2em;
+      font-weight: 600;
+      color: $BackgroundColor;
+      margin: 0;
+      span {
+        color: white;
+      }
+    }
+
+    p {
+      font-size: 0.8em;
+      line-height: 200%;
+      font-weight: 300;
+      margin: 0;
+    }
+  }
+
+  .booking-btn {
+    background-color: $BoxColor2;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: $BoxShadow1;
+    margin: 1em auto;
+    cursor: pointer;
+
+    h3 {
+      margin: 0.8em auto;
+    }
+  }
+}
+
+/* for small tablet - inclusive */
+
+@media only screen and (min-width: 45em) {
+  .itinerary-thumbnail {
+    .age,
+    .licdnse,
+    .number,
+    .milsage {
+      flex: 0 0 45%;
+      margin-right: 2em;
+    }
+  }
+}
+
+/* for tablet - inclusive */
+
+@media only screen and (min-width: 65em) {
+  .itinerary-thumbnail {
+    .age,
+    .licdnse,
+    .number,
+    .milsage {
+      flex: 0 0 35%;
+      margin-right: 2em;
+    }
+  }
+
+  .select-car-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    header {
+      flex: 1 0 100%;
+      padding-left: 0;
+    }
+
+    nav {
+      flex: 1 0 100%;
+    }
+
+    .itinerary-thumbnail-container {
+      order: 3;
+      flex: 0 0 30%;
+      height: 40%;
+    }
+
+    .vehicle-total-container {
+      order: 2;
+      flex: 0 0 65%;
+      margin-right: 1em;
+    }
+  }
+
+  .vehicle-thumbnail {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .car-basic-info-container {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $BackgroundColor;
+    }
+
+    .car-detail {
+      flex: 0 0 50%;
+    }
+  }
+
+  .car-basic-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .car-basic-info-content {
+    flex: 0 0 45%;
+    margin: 0;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .price-container {
+    order: 8;
+    flex: 0 0 55%;
+    p {
+      white-space: nowrap;
+      margin: 0.2em 0;
+      font-size: 1.7em;
+    }
+  }
+
+  .car-additional-info {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .car-additional-info-content-1 {
+    flex: 0 0 auto;
+    margin: 0 1em;
+  }
+
+  .car-additional-info-content-2 {
+    flex: 0 0 35%;
+  }
+
+  .car-price-info {
+    flex: 0 0 65%;
+    text-align: end;
+    .price-holder {
+      font-size: 1.7em;
+      white-space: nowrap;
+    }
+    p {
+      font-size: 0.5rem;
+    }
+  }
+
+  .booking-btn {
+    flex: 0 0 30%;
+    align-self: center;
+  }
+}
+
+/* for desktop - inclusive  */
+
+@media only screen and (min-width: 80em) {
+  .itinerary-thumbnail-container,
+  .vehicle-thumbnail-container {
+    margin-right: 0;
+  }
+
+  .itinerary-thumbnail {
+    .age,
+    .licdnse,
+    .number,
+    .milsage {
+      flex: 0 0 40%;
+    }
+  }
+
+  .vehicle-thumbnail {
+    .main-img {
+      width: 22em !important;
+    }
+  }
+}

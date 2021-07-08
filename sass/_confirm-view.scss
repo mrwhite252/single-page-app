@@ -1,0 +1,180 @@
+.confirm-booking-view {
+  padding: 0 1em;
+
+  .map-container {
+    height: 20em;
+
+    #map2 {
+      height: 100%;
+      margin: 0 auto;
+      border-radius: 3px;
+      box-shadow: $BoxShadow1;
+    }
+  }
+}
+
+.contact-detail-thumbnail-container {
+  background-color: $BoxColor;
+  padding: 1em;
+  margin: 1em auto;
+  border-radius: 3px;
+  box-shadow: $BoxShadow1;
+}
+
+.contact-detail-content-container {
+  display: flex;
+  flex-direction: column;
+
+  h6 {
+    font-weight: 300;
+    margin: 1em auto;
+  }
+
+  p {
+    font-weight: 300;
+    margin: 0.5em auto;
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-width: 45em) {
+  .confirm-booking-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    header {
+      flex: 1 0 100%;
+      padding: 1em 0;
+    }
+    nav {
+      flex: 1 0 100%;
+    }
+
+    h2 {
+      flex: 1 0 100%;
+    }
+
+    .map-container {
+      flex: 1 0 100%;
+    }
+
+    .map-in-confirm-booking {
+      height: 100%;
+      margin: 1em 0;
+    }
+
+    .confirm-middle-part,
+    .confirm-right-part {
+      flex: 0 0 45%;
+    }
+    .vehicle-thumbnail {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+
+      .main-img {
+        height: 3em;
+        object-fit: contain;
+        flex: 0 0 40%;
+      }
+
+      .car-name {
+        flex: 0 0 40%;
+
+        h2 {
+          font-size: 1.5em;
+        }
+        h3 {
+          font-size: 1em;
+          white-space: nowrap;
+        }
+      }
+
+      .car-basic-info {
+        flex: 1 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .car-basic-info-content {
+          flex: 0 0 45%;
+          margin: 0;
+          font-size: 0.8em;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .quote-line {
+      margin: 0;
+    }
+    .total-cost {
+      p {
+        margin: 0.2em 0;
+      }
+    }
+
+    .terms {
+      font-size: 0.5em;
+    }
+
+    .final {
+      flex: 1 0 100%;
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .contact-detail-content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .contact-detail-line {
+      flex: 0 0 45%;
+    }
+  }
+}
+
+/* for tablet - inclusive */
+
+@media only screen and (min-width: 65em) {
+  .confirm-booking-view {
+    justify-content: space-between;
+    .map-container,
+    .confirm-middle-part,
+    .confirm-right-part {
+      flex: 0 0 30%;
+      margin: 1em 0;
+      height: 33em;
+    }
+    .confirm-middle-part,
+    .confirm-right-part {
+      margin-top: 0;
+    }
+
+    .contact-detail-thumbnail-container,
+    .vehicle-thumbnail-container {
+      height: 12em;
+    }
+
+    .itinerary-thumbnail-container,
+    .quote-container {
+      height: 16.5em;
+      margin: 0;
+    }
+
+    .car-detail {
+      flex: 1 0 90%;
+    }
+
+    .final {
+      margin: 2em auto;
+    }
+  }
+}
+
+/* for desktop - inclusive  */
+
+@media only screen and (min-width: 80em) {
+}

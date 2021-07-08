@@ -1,0 +1,104 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+header {
+  height: 3em;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  border-bottom: thin dotted $BoxColor2;
+
+  img {
+    display: block;
+    flex: 0 0 25%;
+    width: 6em;
+  }
+
+  img:nth-child(3) {
+    width: 9em;
+  }
+}
+
+main {
+  background-color: $BackgroundColor;
+  font-family: $BodyFont;
+  color: white;
+  padding: 0 1em;
+
+  input,
+  select {
+    display: block;
+    color: white;
+    background-color: $BackgroundColor;
+    border: none;
+    outline-color: white;
+    height: 1.5em;
+    margin: 0.5em 0;
+  }
+
+  .views {
+    min-height: 100vh;
+    margin-top: 5rem;
+  }
+}
+
+nav {
+  ul {
+    display: flex;
+    margin: 0.5em auto;
+    padding: 0;
+    justify-content: space-between;
+
+    li {
+      list-style-type: none;
+    }
+    a {
+      text-decoration: none;
+      white-space: nowrap;
+      font-size: 0.8em;
+      color: $BoxColor;
+    }
+
+    a:hover {
+      color: $BoxColor2;
+      transform: scale(1.5);
+    }
+  }
+}
+
+/* for small tablet - inclusive */
+
+@media only screen and (min-width: 45em) {
+}
+
+/* for tablet - inclusive */
+
+@media only screen and (min-width: 65em) {
+  header {
+    img:nth-child(3) {
+      width: 15em;
+    }
+  }
+}
+
+/* for desktop - inclusive  */
+
+@media only screen and (min-width: 80em) {
+  body {
+    border: 1px solid green;
+  }
+
+  header {
+    margin: 1em;
+
+    img:nth-child(3) {
+      width: 30em;
+    }
+  }
+}

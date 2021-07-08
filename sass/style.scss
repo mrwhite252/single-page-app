@@ -1,0 +1,86 @@
+// color, fonts & drop-shadow
+
+@font-face {
+  font-family: PurePakati;
+  src: url(../../fonts/PurePakati-Notch.otf);
+}
+
+$HeadingFont: "Permanent Marker", cursive;
+$BodyFont: "Ubuntu", sans-serif;
+$LogoFont: "Raleway", sans-serif;
+$TNZFont: PurePakati;
+
+$BackgroundColor: rgba(181, 210, 217, 1);
+$BoxColor: rgba(101, 154, 165, 1);
+$BoxColor2: rgba(48, 96, 116, 1);
+$Brown: rgba(234, 84, 21, 1);
+$Blue: rgba(1, 93, 168, 1);
+
+$BoxShadow1: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+// landing view
+
+@import "../sass/landing-view";
+
+// page structure settings
+
+@import "../sass/page-structure";
+
+// home view
+@import "../sass/home-view";
+
+// select car view
+
+@import "../sass/select-car-view";
+
+// add extra view
+
+@import "../sass/add-extra-view";
+
+// confirm booking view
+
+@import "../sass/confirm-view";
+
+// swipe tabs settings
+
+// $swipe-tab-color: #757575;
+// $swipe-active-tab-color: #000;
+
+// .slick-initialized {
+//   .swipe-tab-content {
+//     position: relative;
+//     display: flex;
+//   }
+
+//   .swipe-tab {
+//     flex: 0 0 35%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 50px;
+//     background: none;
+//     border: 0;
+//     color: $swipe-tab-color;
+//     cursor: pointer;
+//     text-align: center;
+//     border-bottom: 2px solid rgba($swipe-active-tab-color, 0);
+//     transition: all 0.5s;
+
+//     &:hover {
+//       color: $swipe-active-tab-color;
+//     }
+
+//     &.active-tab {
+//       border-bottom-color: $swipe-active-tab-color;
+//       color: $swipe-active-tab-color;
+//       font-weight: bold;
+//     }
+//   }
+// }
+
+// leafletjs settings
+
+.leaflet-routing-container {
+  background: $BoxColor;
+  height: 60%;
+}

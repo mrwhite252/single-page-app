@@ -1,0 +1,410 @@
+// mobile view
+
+.add-extra-view {
+  padding: 0 1em;
+}
+
+.insurance-container {
+  h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .bond-info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 0.5em;
+
+    p {
+      margin-left: 1em;
+    }
+  }
+}
+
+.insurance-thumbnail-container {
+  display: flex;
+  justify-content: space-around;
+
+  label {
+    background-color: $BoxColor;
+    padding: 1.5em;
+    position: relative;
+    margin: 1em 0;
+    border-radius: 3px;
+    box-shadow: $BoxShadow1;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+
+    h4 {
+      margin: 0;
+    }
+  }
+
+  .insurance-content {
+    span {
+      font-weight: 800;
+      font-size: 1.5em;
+    }
+  }
+
+  .tag {
+    position: absolute;
+    top: -1.5em;
+    left: 1em;
+    font-size: 0.5em;
+    background-color: $Blue;
+    padding: 1em;
+    border-radius: 10px;
+  }
+
+  //   hide the defult radio button
+  input {
+    position: absolute;
+    top: 0.4em;
+    left: 0;
+    opacity: 0;
+  }
+
+  // create a custom radio button
+
+  .checkmark {
+    position: absolute;
+    top: 1.7em;
+    left: 0.3em;
+    height: 0.8em;
+    width: 0.8em;
+    background: $BackgroundColor;
+    border-radius: 50%;
+    transition: 0.2s all ease-in-out;
+  }
+
+  label:hover {
+    transform: scale(1.02);
+  }
+
+  label:hover input ~ .checkmark {
+    background: $BoxColor2;
+  }
+
+  label > input:checked ~ .checkmark {
+    background: $BoxColor2;
+  }
+}
+
+.custmoer-detail-container {
+  h2 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  #requirement {
+    font-size: 0.8em;
+    font-weight: 200;
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+  }
+  .detail-line {
+    input {
+      background-color: $BoxColor;
+      width: 100%;
+      padding: 0.5em 0;
+      text-indent: 0.5em;
+    }
+    ::placeholder {
+      color: $BackgroundColor;
+    }
+  }
+
+  .pick-up {
+    label {
+      position: relative;
+      padding-left: 2em;
+    }
+    // hide the defult radio button
+    input {
+      opacity: 0;
+    }
+
+    // create a custom radio button
+
+    .checkmark {
+      position: absolute;
+      top: 1.2em;
+      left: 0.5em;
+      height: 0.8em;
+      width: 0.8em;
+      background: $BoxColor;
+      border-radius: 50%;
+    }
+
+    label > input:checked ~ .checkmark {
+      background: $BoxColor2;
+    }
+  }
+
+  #yes-option {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  #no-option {
+    display: flex;
+    align-items: center;
+  }
+
+  .flight-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    label {
+      margin-right: 1em;
+    }
+
+    input {
+      opacity: 100;
+      position: relative;
+      background-color: $BoxColor;
+      border-radius: 3px;
+      box-shadow: $BoxShadow1;
+      height: 2em;
+    }
+  }
+}
+
+.checkbox {
+  background-color: $Blue;
+  display: flex;
+  margin: 2em auto;
+  padding: 0.5em 1em;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: $BoxShadow1;
+
+  input {
+    margin-right: 1em;
+  }
+}
+
+.quote-container {
+  background-color: $BoxColor;
+  padding: 1em;
+  box-shadow: $BoxShadow1;
+  border-radius: 3px;
+
+  .thumbnail-title {
+    border-bottom: 1px solid $BackgroundColor;
+    font-size: 1.5em;
+    margin: 0;
+    color: $BackgroundColor;
+  }
+
+  .quote-line {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      margin: 0.5em 0;
+    }
+  }
+
+  .subtotal {
+    color: $Blue;
+    font-weight: 800;
+  }
+  .total-cost {
+    text-align: end;
+    font-size: 2em;
+    font-weight: 800;
+    color: $Blue;
+  }
+
+  .terms {
+    font-size: 0.2em;
+    font-weight: 200;
+    text-align: end;
+  }
+}
+
+.confirm-btn {
+  margin: 1em 0;
+  text-align: center;
+  font-size: 1.5em;
+  background-color: $BoxColor2;
+  border-radius: 10px;
+  box-shadow: $BoxShadow1;
+  cursor: pointer;
+  transition: 0.2s all ease-in-out;
+  p {
+    padding: 0.5em;
+  }
+}
+
+.confirm-btn:hover {
+  transform: scale(1.01);
+}
+
+/* for small tablet - inclusive */
+
+@media only screen and (min-width: 45em) {
+}
+
+/* for tablet - inclusive */
+
+@media only screen and (min-width: 65em) {
+  .add-extra-view {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    header {
+      flex: 1 0 100%;
+      padding-left: 0;
+    }
+
+    nav {
+      flex: 1 0 100%;
+      margin: 1em 0;
+    }
+  }
+
+  .insurance-container {
+    order: 1;
+    flex: 0 0 60%;
+
+    h2 {
+      text-align: left;
+    }
+  }
+
+  .itinerary-thumbnail-container {
+    order: 2;
+    flex: 0 0 30%;
+    height: 40%;
+  }
+
+  .custmoer-detail-container {
+    order: 3;
+    flex: 0 0 60%;
+
+    h2 {
+      text-align: left;
+    }
+  }
+
+  .vehicle-thumbnail-container {
+    order: 4;
+    flex: 0 0 30%;
+  }
+
+  .add-extra-view {
+    .vehicle-thumbnail-container {
+      height: 40%;
+    }
+  }
+
+  .vehicle-thumbnail {
+    .main-img {
+      width: 15em;
+    }
+  }
+
+  .quote-container {
+    order: 5;
+    flex: 1 0 auto;
+  }
+
+  .confirm-btn {
+    order: 6;
+    flex: 1 0 100%;
+    padding: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+/* for desktop - inclusive  */
+
+@media only screen and (min-width: 80em) {
+  .insurance-thumbnail-container {
+    margin: 0;
+    label {
+      flex: 0 0 23%;
+      padding-left: 2em;
+    }
+  }
+
+  .extra-item-container {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+      flex: 1 0 100%;
+    }
+  }
+
+  .extra-item-thumbnail {
+    flex: 0 0 45%;
+    margin: 0 0.5em;
+    .description {
+      font-size: 0.9em;
+    }
+  }
+
+  .add-extra-view {
+    .vehicle-thumbnail {
+      justify-content: flex-start;
+      padding: 0 1em;
+    }
+    .car-discription {
+      white-space: nowrap;
+    }
+  }
+
+  .quote-container {
+    margin: 2em auto;
+    padding: 1em 2em;
+
+    .thumbnail-title {
+      border-bottom: 1px solid $BackgroundColor;
+      font-size: 1.5em;
+      margin: 0;
+      color: $BackgroundColor;
+    }
+
+    .quote-line {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin: 0.5em 0;
+      }
+    }
+
+    .subtotal {
+      color: $Blue;
+      font-weight: 800;
+    }
+    .total-cost {
+      text-align: end;
+      font-size: 2em;
+      font-weight: 800;
+      color: $Blue;
+    }
+
+    .terms {
+      font-size: 0.2em;
+      font-weight: 200;
+      text-align: end;
+    }
+  }
+}

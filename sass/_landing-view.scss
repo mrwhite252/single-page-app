@@ -1,0 +1,124 @@
+// mobile view
+
+.landing-view {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../images/landing-view-background.jpeg);
+  background-position: right;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 10000;
+  transition: 1s all ease-in-out;
+
+  .landing {
+    font-family: PurePakati;
+    color: white;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  #TNZ-logo {
+    font-family: PurePakati;
+    color: $Blue;
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+    flex: 0 0 10%;
+  }
+
+  .landing-btns {
+    flex: 1 0 auto;
+    cursor: pointer;
+  }
+  .left-btn,
+  .right-btn {
+    display: flex;
+    margin: 1em;
+    padding: 0.5em;
+    height: 3em;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(48, 96, 116, 0.5);
+    box-shadow: $BoxShadow1;
+
+    i {
+      font-size: 1.5em;
+      align-self: center;
+      display: none;
+    }
+  }
+
+  .slogan {
+    flex: 0 0 30%;
+    margin: 0;
+    padding: 0.5em;
+    align-self: flex-end;
+  }
+}
+
+/* for small tablet - inclusive */
+
+@media only screen and (min-width: 45em) {
+}
+
+/* for tablet - inclusive */
+
+@media only screen and (min-width: 65em) {
+  .landing-view {
+    h1 {
+      font-size: 4em;
+    }
+    .landing-btns {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      padding: 2em;
+      align-items: center;
+    }
+
+    .left-btn,
+    .right-btn {
+      flex: 1 0 40%;
+
+      i {
+        display: block;
+      }
+    }
+
+    .slogan {
+      padding-right: 1em;
+    }
+  }
+}
+
+/* for desktop - inclusive  */
+
+@media only screen and (min-width: 80em) {
+  .landing-view {
+    h1 {
+      font-size: 4em;
+    }
+
+    .landing-btns {
+      justify-content: space-between;
+    }
+
+    .left-btn,
+    .right-btn {
+      flex: 0 0 30%;
+    }
+
+    .slogan {
+      padding-top: 0;
+      padding-right: 3em;
+    }
+  }
+}
